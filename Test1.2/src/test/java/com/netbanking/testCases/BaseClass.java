@@ -1,5 +1,7 @@
 package com.netbanking.testCases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import java.util.logging.Logger;
 
 import org.apache.log4j.PropertyConfigurator;
@@ -27,6 +29,7 @@ public class BaseClass {
 			PropertyConfigurator.configure("Log4j.properties");
 		}
 		
+		@AfterMethod
 		@AfterClass
 		public void tearDown()
 		{

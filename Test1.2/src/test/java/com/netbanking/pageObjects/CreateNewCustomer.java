@@ -11,7 +11,7 @@ public class CreateNewCustomer {
 	public CreateNewCustomer(WebDriver driver)
 	{
 		CDriver = driver;
-		PageFactory.initElements(CDriver, this);	
+		PageFactory.initElements(CDriver, this);
 	}
 
 	@FindBy(name="name")

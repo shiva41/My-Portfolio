@@ -1,6 +1,9 @@
 package com.netbanking.testCases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.netbanking.pageObjects.LoginPage;
@@ -9,6 +12,7 @@ import com.netbanking.pageObjects.LoginPage;
 
 public class TC_LoginTest_001 extends BaseClass {
 	
+
 	@Test
 	public void loginTest()
 	{
@@ -24,11 +28,11 @@ public class TC_LoginTest_001 extends BaseClass {
 		
 		if(driver.getTitle().equals("GTPL Bank Manager HomePage"))
 		{
-				Assert.assertTrue(true);
+				AssertJUnit.assertTrue(true);
 				logger.info("Login Test Passed");
 		}
 		else 
-			{Assert.assertTrue(false);
+			{AssertJUnit.assertTrue(false);
 			logger.info("Login Test Failed");
 			}
 	}

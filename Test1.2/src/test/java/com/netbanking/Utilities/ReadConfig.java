@@ -20,7 +20,7 @@ public class ReadConfig  {
 	public ReadConfig()
 	{	
 		
-		File src = new File("C:\\Users\\Nero\\AutomationWorkspace\\Test1.2\\Configuration\\config.properties");
+		File src = new File("C:\\Users\\Nero\\git\\repository\\Test1.2\\Configuration\\config.properties");
 		
 		try {
 			FileInputStream fis = new FileInputStream(src);
