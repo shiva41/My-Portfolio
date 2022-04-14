@@ -1,0 +1,50 @@
+import java.util.*;
+public class MyClass {
+    int n=10;
+    int k=1;
+    int i=1;
+    int arr[][] = new int[n][n];
+    int mc=0, mr=0, MC=n-1, MR=n-1;
+    void spiralFunction()
+    {
+        while(k<=(n*n))
+        {
+            for(int j=mc; j<=MC ; j++)
+            {
+                arr[mr][j]=k++;
+                //System.out.println(k+" ");
+            }
+            for(int j=mr+1; j<=MR ; j++)
+            {
+                arr[j][MC]=k++;
+                //System.out.println(k+" ");
+            }
+            for(int j=MC-1; j>=0 ; j--)
+            {
+                arr[MR][j]=k++;
+               // System.out.println(k+" ");
+            }
+            for(int j=MR-1; j>=mr+1 ; j--)
+            {
+                arr[j][mc]=k++;
+                //System.out.println(k+" ");
+            }
+            mc++;
+            mr++;
+            MC--;
+            MR--;
+        }
+            for(int i=0; i<n;i++)
+                {
+                    for(int j=0; j<n; j++)
+                        {
+                            System.out.print(arr[i][j]+" ");
+                        }
+                        System.out.println();
+                }
+    }
+    public static void main(String args[]) {
+      MyClass myc = new MyClass();
+      myc.spiralFunction();
+    }
+}
