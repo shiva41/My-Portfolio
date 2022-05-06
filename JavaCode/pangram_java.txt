@@ -1,0 +1,29 @@
+  void isAPangram()
+{	
+	//char a = "a";
+	String string = "The quic";
+        int count=0;
+	int size = string.length();
+	char [] ch = string.toCharArray();
+	ArrayList<Character> temp = new ArrayList<>();
+	for(int i = 0 ; i < size ; i++)
+    {temp.add(ch[i]);}
+	
+	if(size<26)
+	{
+		System.out.println("Not a pangram");
+	}
+	for(char a : temp)
+	{
+		if(!(temp.contains(a)))
+		{
+			System.out.println("Not a Pangram");
+			break;
+		}
+		count++;
+	}
+	if(count==26)
+	{
+		System.out.println("Pangram");
+	}
+}
